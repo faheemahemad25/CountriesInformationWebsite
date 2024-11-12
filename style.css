@@ -1,0 +1,115 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    background-color: #3d64e6;
+    /* display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; */
+    /* position: relative; */
+}
+
+.container{
+    background-color: white;
+    padding: 2rem;
+    width: 35%;
+    min-height: 60%;
+    border-radius: 20px;
+    box-shadow: 1px 1px 10px rgb(10, 18, 52);
+    
+    position: absolute;
+    transform: translate(-50%, -50%);
+    top: 50%;
+    left: 50%;
+}
+ /*-------------------------- Search Part ---------------------------------*/
+ form {
+       /* border: 2px solid red; */
+     display: grid; /* 📗🔖 */
+    /* grid-template-columns: 75% 25%;  */ /* 📗🔖 */
+    grid-template-columns: 9fr 3fr; /* 📗🔖 */
+    gap: 2rem; 
+
+ } 
+
+ form input {
+    width: 100%; /* 📗🔖 so that if screen size down then it can squeeze. Makes input and button fill their respective grid cells */
+    border: none;
+    border-bottom: 2px solid #3d64e6;
+    font-size: 1rem;
+    font-weight: bold;
+    padding-left: 1rem;
+    outline: none;
+    
+ }
+
+ form button {
+    width: 100%; /*📗🔖 so that if screen size down then it can squeeze.  Makes input and button fill their respective grid cells */
+    border: none;
+    font-size: 1rem;
+    background-color: #3d64e6;
+    color: white;
+    padding: 0.5em 0 0.5em 0;
+    border-radius: 1.5rem;
+    cursor: pointer;
+ }
+
+/* .search-wrapper{ */
+    /* border: 2px solid red; */
+    /* display: grid;  📗🔖 */
+    /* grid-template-columns: 75% 25%; */
+    /* grid-template-columns: 9fr 3fr; */
+    /* gap: 1rem; */
+/* } */
+
+ /*-------------------------- Search Part ---------------------------------*/
+
+.container .search-wrapper, form,  .flag , .info {
+
+    margin-bottom: 40px;
+    /* border: 2px solid red; */
+}
+.flag {
+    text-align: center;
+}
+ .flag img {  /* this img to be came vai api */
+    width: 70%;
+    height: 70%;
+}
+
+.info div {
+  margin: 10px;
+  display: flex;
+  align-items: center;
+}
+.info span {
+    font-weight: 500;
+    font-size: 1.1rem;
+}
+
+.validateMsg{
+    color: red;
+}
+
+
+
+/* ======================================================================================
+                                    media query
+ ===================================================================================== */
+
+@media screen and (max-width:430px){
+    
+    .container{
+        width: 70vw;
+     }
+
+    
+     .info span {
+        font-weight: bold;
+        font-size: 1.1rem;
+    }
+}
+
+
